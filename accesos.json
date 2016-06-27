@@ -1,0 +1,695 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "f61dca58-2d98-45e6-9ae3-9a66433e1f28": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 150,
+          "y": 150
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        ],
+        "isrelatedto": [
+          "075bb29f-d11a-4ffe-be1f-4cf1130e6868"
+        ]
+      },
+      "63f8ba4c-26bb-4335-8c92-de1ffeefa7f8": {
+        "source": {
+          "id": "f61dca58-2d98-45e6-9ae3-9a66433e1f28"
+        },
+        "target": {
+          "id": "2192da6f-5944-4c4f-8fb2-18038a7ab31d"
+        },
+        "z": 1
+      },
+      "a00ace66-bd19-4a11-bdc2-98038839c0d5": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 150,
+          "y": 30
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "f00b0dc2-8ce7-4a70-a831-ad586ffac7c4": {
+        "source": {
+          "id": "f61dca58-2d98-45e6-9ae3-9a66433e1f28"
+        },
+        "target": {
+          "id": "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        },
+        "z": 1
+      },
+      "e5c19de0-bec3-4e5b-a3ea-d2a1723d6cba": {
+        "source": {
+          "id": "0491403a-117d-46c0-b6ee-15d759048055"
+        },
+        "target": {
+          "id": "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        },
+        "z": 11
+      },
+      "075bb29f-d11a-4ffe-be1f-4cf1130e6868": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 150,
+          "y": 270
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "2d865d07-a205-4574-8d3a-1edf51d9a83f": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 60,
+          "y": 30
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "e073614e-00b3-4921-9e04-7f92cb818c8e": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 60,
+          "y": 150
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "2d865d07-a205-4574-8d3a-1edf51d9a83f",
+          "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        ]
+      },
+      "fee94e3c-2de4-405e-9b5f-8ecfe60938c5": {
+        "source": {
+          "id": "e073614e-00b3-4921-9e04-7f92cb818c8e"
+        },
+        "target": {
+          "id": "2d865d07-a205-4574-8d3a-1edf51d9a83f"
+        },
+        "z": 11
+      },
+      "254f57c2-da81-42dd-87f6-cde14b864297": {
+        "source": {
+          "id": "e073614e-00b3-4921-9e04-7f92cb818c8e"
+        },
+        "target": {
+          "id": "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        },
+        "z": 12
+      },
+      "34a82b9e-d611-431b-925b-61893c688de5": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 270,
+          "y": 270
+        },
+        "z": 1,
+        "embeds": []
+      },
+      "00f4869d-aaa5-4931-ba06-cf78c69da2c2": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 270,
+          "y": 150
+        },
+        "z": 1,
+        "embeds": [],
+        "isassociatedwith": [
+          "af880a64-7c89-417c-ac82-8f130e4eeea6",
+          "3e03ca26-3452-42d4-be22-3223139609b9"
+        ],
+        "isrelatedto": [
+          "34a82b9e-d611-431b-925b-61893c688de5"
+        ]
+      },
+      "f01ee606-7b21-4e3a-8ebb-9cab5bb27dcc": {
+        "source": {
+          "id": "00f4869d-aaa5-4931-ba06-cf78c69da2c2"
+        },
+        "target": {
+          "id": "8b17997a-ecd0-4d01-8118-127df2d9a9e4"
+        },
+        "z": 11
+      },
+      "ea03f4dc-7b94-49fc-ab4e-4bcb17cf599e": {
+        "source": {
+          "id": "c6a7dbe0-f930-4245-b397-3195a7394ee3"
+        },
+        "target": {
+          "id": "00f4869d-aaa5-4931-ba06-cf78c69da2c2"
+        },
+        "z": 2
+      },
+      "af880a64-7c89-417c-ac82-8f130e4eeea6": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 268.49642404430637,
+          "y": 36.912590319239946
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "8baa9150-d7f5-4e3b-a8c7-7d77fea804c3": {
+        "source": {
+          "id": "00f4869d-aaa5-4931-ba06-cf78c69da2c2"
+        },
+        "target": {
+          "id": "af880a64-7c89-417c-ac82-8f130e4eeea6"
+        },
+        "z": 2
+      },
+      "42f112d6-c5bb-4d88-aa37-d43cba165f85": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 270,
+          "y": -60
+        },
+        "z": 0,
+        "embeds": [],
+        "isassociatedwith": [
+          "af880a64-7c89-417c-ac82-8f130e4eeea6"
+        ]
+      },
+      "267aa356-5207-40d9-a666-268518bc5e3c": {
+        "source": {
+          "id": "42f112d6-c5bb-4d88-aa37-d43cba165f85"
+        },
+        "target": {
+          "id": "af880a64-7c89-417c-ac82-8f130e4eeea6"
+        },
+        "z": 3
+      },
+      "3e03ca26-3452-42d4-be22-3223139609b9": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 350,
+          "y": 40
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "9e33f866-0527-40d3-8fea-85be845c6a75": {
+        "source": {
+          "id": "42f112d6-c5bb-4d88-aa37-d43cba165f85"
+        },
+        "target": {
+          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
+        },
+        "z": 11
+      },
+      "760954fb-0783-4975-ad5b-a88e0a6571ef": {
+        "source": {
+          "id": "00f4869d-aaa5-4931-ba06-cf78c69da2c2"
+        },
+        "target": {
+          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
+        },
+        "z": 12
+      },
+      "132dde64-c5a7-4073-a2d5-29e72573e244": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 350,
+          "y": 150
+        },
+        "z": 0,
+        "embeds": [],
+        "isassociatedwith": [
+          "3e03ca26-3452-42d4-be22-3223139609b9"
+        ]
+      },
+      "ae51e394-71b5-425f-b5b0-fd9ca33f47ac": {
+        "source": {
+          "id": "132dde64-c5a7-4073-a2d5-29e72573e244"
+        },
+        "target": {
+          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
+        },
+        "z": 13
+      },
+      "f94fe8c6-d53f-42a6-8503-2e8e0dcad6e8": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 350,
+          "y": -60
+        },
+        "z": 0,
+        "embeds": [],
+        "isassociatedwith": [
+          "3e03ca26-3452-42d4-be22-3223139609b9"
+        ]
+      },
+      "eb569ecc-e649-42f2-bd36-eb5004fa1b30": {
+        "source": {
+          "id": "f94fe8c6-d53f-42a6-8503-2e8e0dcad6e8"
+        },
+        "target": {
+          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
+        },
+        "z": 11
+      }
+    }
+  },
+  "Resources": {
+    "CloudFormer": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "La politica base para grupos/usuarios \"CloudFormers\"",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "BucketTerraform",
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:aws:s3:::",
+                    {
+                      "Ref": "EstadosTerraform"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "Sid": "CloudFormation",
+              "Action": "cloudformation:*",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Sid": "ElasticLoadbalancing",
+              "Action": "elasticloadbalancing:*",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Sid": "Autoscaling",
+              "Action": "autoscaling:*",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Sid": "SESPruebas",
+              "Effect": "Allow",
+              "Action": "ses:SendRawEmail",
+              "Resource": "*"
+            },
+            {
+              "Sid": "CloudFormationWants01",
+              "Effect": "Allow",
+              "Action": "ec2:DescribeSecurityGroups",
+              "Resource": "*"
+            },
+            {
+              "Sid": "CloudFormationWants02",
+              "Effect": "Allow",
+              "Action": "ec2:RevokeSecurityGroupIngress",
+              "Resource": "*"
+            }
+          ]
+        },
+        "Groups": [
+          {
+            "Ref": "CloudFormers"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f61dca58-2d98-45e6-9ae3-9a66433e1f28"
+        }
+      }
+    },
+    "CloudFormers": {
+      "Type": "AWS::IAM::Group",
+      "Properties": {},
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        }
+      }
+    },
+    "EstadosTerraform": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {},
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "075bb29f-d11a-4ffe-be1f-4cf1130e6868"
+        }
+      }
+    },
+    "AmiBuilders": {
+      "Type": "AWS::IAM::Group",
+      "Properties": {},
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "2d865d07-a205-4574-8d3a-1edf51d9a83f"
+        }
+      }
+    },
+    "AmiBuilder": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "La politica base para grupos/usuarios \"AmiBuilders\"",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "IAMReadOnlyAccess",
+              "Effect": "Allow",
+              "Action": [
+                "iam:GenerateCredentialReport",
+                "iam:Get*",
+                "iam:List*"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Sid": "PackerWants",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:AttachVolume",
+                "ec2:CreateVolume",
+                "ec2:DeleteVolume",
+                "ec2:CreateKeypair",
+                "ec2:DeleteKeypair",
+                "ec2:DescribeSubnets",
+                "ec2:CreateSecurityGroup",
+                "ec2:DeleteSecurityGroup",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateImage",
+                "ec2:CopyImage",
+                "ec2:RunInstances",
+                "ec2:TerminateInstances",
+                "ec2:StopInstances",
+                "ec2:DescribeVolumes",
+                "ec2:DetachVolume",
+                "ec2:DescribeInstances",
+                "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeSnapshots",
+                "ec2:DescribeImages",
+                "ec2:RegisterImage",
+                "ec2:CreateTags",
+                "ec2:ModifyImageAttribute"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Sid": "ManageSpotInstances",
+              "Effect": "Allow",
+              "Action": [
+                "ec2:CancelSpotInstanceRequests",
+                "ec2:DescribeSpotDatafeedSubscription",
+                "ec2:DescribeSpotFleetInstances",
+                "ec2:DescribeSpotFleetRequestHistory",
+                "ec2:DescribeSpotFleetRequests",
+                "ec2:DescribeSpotInstanceRequests",
+                "ec2:DescribeSpotPriceHistory",
+                "ec2:RequestSpotInstances"
+              ],
+              "Resource": [
+                "*"
+              ]
+            },
+            {
+              "Sid": "PassRoles",
+              "Effect": "Allow",
+              "Action": [
+                "iam:PassRole"
+              ],
+              "Resource": [
+                "*"
+              ]
+            }
+          ]
+        },
+        "Groups": [
+          {
+            "Ref": "AmiBuilders"
+          },
+          {
+            "Ref": "CloudFormers"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "e073614e-00b3-4921-9e04-7f92cb818c8e"
+        }
+      }
+    },
+    "RepositorioRPM": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {},
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "34a82b9e-d611-431b-925b-61893c688de5"
+        }
+      }
+    },
+    "AmiBuilderRolePolicy": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "El rol base para instancias que son AmiBuilders",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "AccesoRepositorioRPM",
+              "Action": [
+                "s3:Get*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:aws:s3:::",
+                    {
+                      "Ref": "RepositorioRPM"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "AmiBuilderRole"
+          },
+          {
+            "Ref": "AppRole"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "00f4869d-aaa5-4931-ba06-cf78c69da2c2"
+        }
+      }
+    },
+    "AmiBuilderRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "ec2.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "af880a64-7c89-417c-ac82-8f130e4eeea6"
+        }
+      }
+    },
+    "AppRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "ec2.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
+        }
+      }
+    },
+    "AppRolePolicy": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "El rol base para instancias que son App",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "TerminarInstancias",
+              "Action": [
+                "ec2:TerminateInstances"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Sid": "AmazonDynamoDBFullAccess",
+              "Action": [
+                "dynamodb:*",
+                "cloudwatch:DeleteAlarms",
+                "cloudwatch:DescribeAlarmHistory",
+                "cloudwatch:DescribeAlarms",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics",
+                "cloudwatch:PutMetricAlarm",
+                "datapipeline:ActivatePipeline",
+                "datapipeline:CreatePipeline",
+                "datapipeline:DeletePipeline",
+                "datapipeline:DescribeObjects",
+                "datapipeline:DescribePipelines",
+                "datapipeline:GetPipelineDefinition",
+                "datapipeline:ListPipelines",
+                "datapipeline:PutPipelineDefinition",
+                "datapipeline:QueryObjects",
+                "iam:ListRoles",
+                "sns:CreateTopic",
+                "sns:DeleteTopic",
+                "sns:ListSubscriptions",
+                "sns:ListSubscriptionsByTopic",
+                "sns:ListTopics",
+                "sns:Subscribe",
+                "sns:Unsubscribe",
+                "sns:SetTopicAttributes",
+                "lambda:CreateFunction",
+                "lambda:ListFunctions",
+                "lambda:ListEventSourceMappings",
+                "lambda:CreateEventSourceMapping",
+                "lambda:DeleteEventSourceMapping",
+                "lambda:GetFunctionConfiguration",
+                "lambda:DeleteFunction"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "AppRole"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "132dde64-c5a7-4073-a2d5-29e72573e244"
+        }
+      }
+    },
+    "AmiBuilderInstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "AmiBuilderRole"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "42f112d6-c5bb-4d88-aa37-d43cba165f85"
+        }
+      }
+    },
+    "AppRoleInstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "AppRole"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f94fe8c6-d53f-42a6-8503-2e8e0dcad6e8"
+        }
+      }
+    }
+  }
+}
