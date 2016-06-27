@@ -7,7 +7,7 @@ El objetivo de estas plantillas es generar una base común y controlada de los r
  - Privilegios en IAM
  - Buckets de S3
 
-Las plantillas están pensadas para ser convertidas en "stacks" de CloudFormation por medio de la interfaz web con un usuario administrador con suficientes privilegios. Bien sea para creación o actualización.
+Las plantillas están pensadas para ser convertidas en "stacks" de CloudFormation por medio de la interfaz web con un usuario administrador con suficientes privilegios. Bien sea para creación, actualización o borrado.
 
 Crear stacks
 ------------
@@ -25,9 +25,12 @@ Crear stacks
 
    ![continuar](http://i.imgur.com/aSg1z0P.png)
 
-1. Establecer el nombre único del stack y llenar los parámetros (si los hubiere), para nombrar el stack puede tener en cuenta, 1) El nombre de la aplicación que se soportará y el "ambiente" en el cuál se va a desplegar. Por ejemplo: "desarrollo", "pruebas", "produccion", etc.
+1. Establecer el nombre único del stack y llenar los parámetros (si los hubiere), para nombrar el stack puede tener en cuenta
 
-   ![nombrar](http://i.imgur.com/WoE6e2o.png)
+  1. El nombre de la aplicación que se soportará
+  1. El ambiente en el cuál se va a desplegar.
+
+     ![nombrar](http://i.imgur.com/WoE6e2o.png)
 
 1. Opcionalmente puede etiquetar el stack.
 
@@ -49,7 +52,7 @@ Actualizar stacks
 
    ![actualizar stack](http://i.imgur.com/hAgARQr.png)
 
-1. Se repiten los pasos de selección para crear.
+1. Repetir los pasos de la creación: Examinar el archivo `.template` que se va a actualizar y continuar.
 1. Hacer una revisión de los cambios que se harán:
 
    ![revisar](http://i.imgur.com/Y0T7u4w.png)
@@ -66,9 +69,11 @@ Borrar stacks
 
    ![borrar](http://i.imgur.com/Z2IgG5Y.png)
 
-Directorios
------------
+Organización
+------------
 
-### Apps
+### Directorios
 
- - condor
+#### Apps
+
+ - `./condor/`
