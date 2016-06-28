@@ -702,33 +702,6 @@
         }
       }
     },
-    "AppRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Sid": "AssumeRole",
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com"
-                ]
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        }
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
-        }
-      }
-    },
     "AppRolePolicy": {
       "Type": "AWS::IAM::ManagedPolicy",
       "Properties": {
@@ -810,21 +783,6 @@
       "Metadata": {
         "AWS::CloudFormation::Designer": {
           "id": "42f112d6-c5bb-4d88-aa37-d43cba165f85"
-        }
-      }
-    },
-    "AppRoleInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          {
-            "Ref": "AppRole"
-          }
-        ]
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "f94fe8c6-d53f-42a6-8503-2e8e0dcad6e8"
         }
       }
     },
@@ -927,6 +885,48 @@
           "id": "72504e3e-5afc-4279-8d72-b32f906be686"
         }
       }
+    },
+    "AppInstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "AppRole"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f94fe8c6-d53f-42a6-8503-2e8e0dcad6e8"
+        }
+      }
+    },
+    "AppRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "ec2.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "3e03ca26-3452-42d4-be22-3223139609b9"
+        }
+      }
     }
   },
   "Outputs": {
@@ -979,6 +979,16 @@
     "AmiBuilderSubnet2": {
       "Value": {
         "Ref": "AmiBuilderSubnet2"
+      }
+    },
+    "AmiBuilderInstanceProfile": {
+      "Value": {
+        "Ref": "AmiBuilderInstanceProfile"
+      }
+    },
+    "AppInstanceProfile": {
+      "Value": {
+        "Ref": "AppInstanceProfile"
       }
     }
   }
