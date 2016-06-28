@@ -295,8 +295,8 @@
           "height": 60
         },
         "position": {
-          "x": -50,
-          "y": 30
+          "x": 60,
+          "y": -70
         },
         "z": 0,
         "embeds": [],
@@ -319,13 +319,12 @@
           "height": 60
         },
         "position": {
-          "x": -50,
-          "y": -40
+          "x": 150,
+          "y": -70
         },
         "z": 0,
         "embeds": [],
         "isassociatedwith": [
-          "2d865d07-a205-4574-8d3a-1edf51d9a83f",
           "a00ace66-bd19-4a11-bdc2-98038839c0d5"
         ]
       },
@@ -353,8 +352,8 @@
           "height": 60
         },
         "position": {
-          "x": -150,
-          "y": -40
+          "x": 150,
+          "y": -170
         },
         "z": 0,
         "embeds": [],
@@ -368,8 +367,8 @@
           "height": 60
         },
         "position": {
-          "x": -150,
-          "y": 30
+          "x": 60,
+          "y": -170
         },
         "z": 0,
         "embeds": [],
@@ -383,8 +382,8 @@
           "height": 150
         },
         "position": {
-          "x": -310,
-          "y": -30
+          "x": -110,
+          "y": -150
         },
         "z": 0,
         "embeds": [
@@ -398,8 +397,8 @@
           "height": 30
         },
         "position": {
-          "x": -290,
-          "y": 10
+          "x": -90,
+          "y": -110
         },
         "z": 1,
         "parent": "8a043c13-483f-4305-8616-0ee6c2befd80",
@@ -411,8 +410,8 @@
           "height": 30
         },
         "position": {
-          "x": -290,
-          "y": 70
+          "x": -90,
+          "y": -50
         },
         "z": 1,
         "parent": "8a043c13-483f-4305-8616-0ee6c2befd80",
@@ -806,9 +805,6 @@
       "Properties": {
         "Groups": [
           {
-            "Ref": "AmiBuilders"
-          },
-          {
             "Ref": "CloudFormers"
           }
         ]
@@ -979,6 +975,22 @@
     "AmiBuilderSubnet2": {
       "Value": {
         "Ref": "AmiBuilderSubnet2"
+      }
+    },
+    "AvailabilityZone1": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AmiBuilderSubnet1",
+          "AvailabilityZone"
+        ]
+      }
+    },
+    "AvailabilityZone2": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AmiBuilderSubnet2",
+          "AvailabilityZone"
+        ]
       }
     },
     "AmiBuilderInstanceProfile": {
