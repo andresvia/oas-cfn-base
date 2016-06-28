@@ -142,7 +142,8 @@
         "embeds": [],
         "isassociatedwith": [
           "af880a64-7c89-417c-ac82-8f130e4eeea6",
-          "3e03ca26-3452-42d4-be22-3223139609b9"
+          "3e03ca26-3452-42d4-be22-3223139609b9",
+          "2d865d07-a205-4574-8d3a-1edf51d9a83f"
         ],
         "isrelatedto": [
           "34a82b9e-d611-431b-925b-61893c688de5"
@@ -523,6 +524,15 @@
           "id": "8a043c13-483f-4305-8616-0ee6c2befd80"
         },
         "z": 1
+      },
+      "106d02ef-2725-479e-9e9e-569b2b3a749a": {
+        "source": {
+          "id": "00f4869d-aaa5-4931-ba06-cf78c69da2c2"
+        },
+        "target": {
+          "id": "2d865d07-a205-4574-8d3a-1edf51d9a83f"
+        },
+        "z": 4
       }
     }
   },
@@ -741,7 +751,7 @@
     "AmiBuilderRolePolicy": {
       "Type": "AWS::IAM::ManagedPolicy",
       "Properties": {
-        "Description": "El rol base para instancias que son AmiBuilders",
+        "Description": "El rol base para instancias/usuarios que son AmiBuilders",
         "PolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [
@@ -772,6 +782,11 @@
           },
           {
             "Ref": "AppRole"
+          }
+        ],
+        "Groups": [
+          {
+            "Ref": "AmiBuilders"
           }
         ]
       },
