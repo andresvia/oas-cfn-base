@@ -379,14 +379,43 @@
       },
       "8a043c13-483f-4305-8616-0ee6c2befd80": {
         "size": {
-          "width": 100,
+          "width": 140,
+          "height": 150
+        },
+        "position": {
+          "x": -310,
+          "y": -30
+        },
+        "z": 0,
+        "embeds": [
+          "72504e3e-5afc-4279-8d72-b32f906be686",
+          "97441018-c1b0-4602-a2fa-bd2d5e054517"
+        ]
+      },
+      "97441018-c1b0-4602-a2fa-bd2d5e054517": {
+        "size": {
+          "width": 110,
           "height": 30
         },
         "position": {
-          "x": -60,
-          "y": 130
+          "x": -290,
+          "y": 10
         },
-        "z": 0,
+        "z": 1,
+        "parent": "8a043c13-483f-4305-8616-0ee6c2befd80",
+        "embeds": []
+      },
+      "72504e3e-5afc-4279-8d72-b32f906be686": {
+        "size": {
+          "width": 110,
+          "height": 30
+        },
+        "position": {
+          "x": -290,
+          "y": 70
+        },
+        "z": 1,
+        "parent": "8a043c13-483f-4305-8616-0ee6c2befd80",
         "embeds": []
       }
     }
@@ -861,11 +890,41 @@
     "AmiBuilderVPC": {
       "Type": "AWS::EC2::VPC",
       "Properties": {
-        "CidrBlock": "192.168.121.0/24"
+        "CidrBlock": "192.168.120.0/23"
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
           "id": "8a043c13-483f-4305-8616-0ee6c2befd80"
+        }
+      }
+    },
+    "AmiBuilderSubnet1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "192.168.120.0/24",
+        "MapPublicIpOnLaunch": true,
+        "VpcId": {
+          "Ref": "AmiBuilderVPC"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "97441018-c1b0-4602-a2fa-bd2d5e054517"
+        }
+      }
+    },
+    "AmiBuilderSubnet2": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "192.168.121.0/24",
+        "MapPublicIpOnLaunch": true,
+        "VpcId": {
+          "Ref": "AmiBuilderVPC"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "72504e3e-5afc-4279-8d72-b32f906be686"
         }
       }
     }
@@ -908,7 +967,19 @@
       }
     },
     "AmiBuilderVPC": {
-      "Value": { "Ref": "AmiBuilderVPC" }
+      "Value": {
+        "Ref": "AmiBuilderVPC"
+      }
+    },
+    "AmiBuilderSubnet1": {
+      "Value": {
+        "Ref": "AmiBuilderSubnet1"
+      }
+    },
+    "AmiBuilderSubnet2": {
+      "Value": {
+        "Ref": "AmiBuilderSubnet2"
+      }
     }
   }
 }
