@@ -930,12 +930,12 @@
     }
   },
   "Outputs": {
-    "EstadosTerraform": {
+    "CloudFormerEstadosTerraform": {
       "Value": {
         "Ref": "EstadosTerraform"
       }
     },
-    "RepositorioRPM": {
+    "CloudFormerRepositorioRPM": {
       "Value": {
         "Ref": "RepositorioRPM"
       }
@@ -968,7 +968,7 @@
         "Ref": "CloudFormerSubnet2"
       }
     },
-    "AvailabilityZone1": {
+    "CloudFormerAvailabilityZone1": {
       "Value": {
         "Fn::GetAtt": [
           "CloudFormerSubnet1",
@@ -976,7 +976,7 @@
         ]
       }
     },
-    "AvailabilityZone2": {
+    "CloudFormerAvailabilityZone2": {
       "Value": {
         "Fn::GetAtt": [
           "CloudFormerSubnet2",
