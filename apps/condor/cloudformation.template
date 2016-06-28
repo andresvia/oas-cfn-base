@@ -288,6 +288,106 @@
           "id": "3e03ca26-3452-42d4-be22-3223139609b9"
         },
         "z": 11
+      },
+      "574027d1-be82-4654-84f5-cc164f5586de": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -50,
+          "y": 30
+        },
+        "z": 0,
+        "embeds": [],
+        "isassociatedwith": [
+          "2d865d07-a205-4574-8d3a-1edf51d9a83f"
+        ]
+      },
+      "ee7e1880-a7bd-43f9-9cd4-a995289381c0": {
+        "source": {
+          "id": "574027d1-be82-4654-84f5-cc164f5586de"
+        },
+        "target": {
+          "id": "2d865d07-a205-4574-8d3a-1edf51d9a83f"
+        },
+        "z": 11
+      },
+      "e8dbf5cd-5db7-4271-8b3b-20bcdbc1c2fe": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -50,
+          "y": -40
+        },
+        "z": 0,
+        "embeds": [],
+        "isassociatedwith": [
+          "2d865d07-a205-4574-8d3a-1edf51d9a83f",
+          "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        ]
+      },
+      "ec4d75a7-625c-43c8-b90c-89b1a1a30c84": {
+        "source": {
+          "id": "e8dbf5cd-5db7-4271-8b3b-20bcdbc1c2fe"
+        },
+        "target": {
+          "id": "2d865d07-a205-4574-8d3a-1edf51d9a83f"
+        },
+        "z": 12
+      },
+      "a5c85832-4b49-4219-b792-25d2a2b255ab": {
+        "source": {
+          "id": "e8dbf5cd-5db7-4271-8b3b-20bcdbc1c2fe"
+        },
+        "target": {
+          "id": "a00ace66-bd19-4a11-bdc2-98038839c0d5"
+        },
+        "z": 13
+      },
+      "53125f7e-77fe-4713-8e8a-b48af024c255": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -150,
+          "y": -40
+        },
+        "z": 0,
+        "embeds": [],
+        "isrelatedto": [
+          "e8dbf5cd-5db7-4271-8b3b-20bcdbc1c2fe"
+        ]
+      },
+      "57c5f7e5-4546-454b-9ab6-4fbd231bfeac": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": -150,
+          "y": 30
+        },
+        "z": 0,
+        "embeds": [],
+        "isrelatedto": [
+          "574027d1-be82-4654-84f5-cc164f5586de"
+        ]
+      },
+      "8a043c13-483f-4305-8616-0ee6c2befd80": {
+        "size": {
+          "width": 100,
+          "height": 30
+        },
+        "position": {
+          "x": -60,
+          "y": 130
+        },
+        "z": 0,
+        "embeds": []
       }
     }
   },
@@ -408,6 +508,14 @@
                 "iam:GenerateCredentialReport",
                 "iam:Get*",
                 "iam:List*"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Sid": "DiscoverStacks",
+              "Effect": "Allow",
+              "Action": [
+                "cloudformation:DescribeStacks"
               ],
               "Resource": "*"
             },
@@ -690,6 +798,117 @@
           "id": "f94fe8c6-d53f-42a6-8503-2e8e0dcad6e8"
         }
       }
+    },
+    "AmiBuilderUser": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "Groups": [
+          {
+            "Ref": "AmiBuilders"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "574027d1-be82-4654-84f5-cc164f5586de"
+        }
+      }
+    },
+    "CloudFormerUser": {
+      "Type": "AWS::IAM::User",
+      "Properties": {
+        "Groups": [
+          {
+            "Ref": "AmiBuilders"
+          },
+          {
+            "Ref": "CloudFormers"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "e8dbf5cd-5db7-4271-8b3b-20bcdbc1c2fe"
+        }
+      }
+    },
+    "CloudFormerKey": {
+      "Type": "AWS::IAM::AccessKey",
+      "Properties": {
+        "UserName": {
+          "Ref": "CloudFormerUser"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "53125f7e-77fe-4713-8e8a-b48af024c255"
+        }
+      }
+    },
+    "AmiBuilderKey": {
+      "Type": "AWS::IAM::AccessKey",
+      "Properties": {
+        "UserName": {
+          "Ref": "AmiBuilderUser"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "57c5f7e5-4546-454b-9ab6-4fbd231bfeac"
+        }
+      }
+    },
+    "AmiBuilderVPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "192.168.121.0/24"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "8a043c13-483f-4305-8616-0ee6c2befd80"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "EstadosTerraform": {
+      "Value": {
+        "Ref": "EstadosTerraform"
+      }
+    },
+    "RepositorioRPM": {
+      "Value": {
+        "Ref": "RepositorioRPM"
+      }
+    },
+    "CloudFormerAccessKeyId": {
+      "Value": {
+        "Ref": "CloudFormerKey"
+      }
+    },
+    "CloudFormerSecretAccessKey": {
+      "Value": {
+        "Fn::GetAtt": [
+          "CloudFormerKey",
+          "SecretAccessKey"
+        ]
+      }
+    },
+    "AmiBuilderAccessKeyId": {
+      "Value": {
+        "Ref": "AmiBuilderKey"
+      }
+    },
+    "AmiBuilderSecretAccessKey": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AmiBuilderKey",
+          "SecretAccessKey"
+        ]
+      }
+    },
+    "AmiBuilderVPC": {
+      "Value": { "Ref": "AmiBuilderVPC" }
     }
   }
 }
