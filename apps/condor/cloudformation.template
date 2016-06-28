@@ -1070,23 +1070,23 @@
         }
       }
     },
-    "EC2SRTA4N1KH": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    "InternetGWAttachVPC": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
       "Properties": {
-        "RouteTableId": {
-          "Ref": "AmiBuilderRouting"
+        "InternetGatewayId": {
+          "Ref": "AmiBuilderGW"
         },
-        "SubnetId": {
-          "Ref": "AmiBuilderSubnet1"
+        "VpcId": {
+          "Ref": "AmiBuilderVPC"
         }
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
-          "id": "5d52e19e-85cb-44be-a75f-0f9450bfb619"
+          "id": "fb6eb302-200a-4f7b-9bed-446ec37fe59c"
         }
       }
     },
-    "EC2SRTA3XH0Z": {
+    "RTAttachSN1": {
       "Type": "AWS::EC2::SubnetRouteTableAssociation",
       "Properties": {
         "RouteTableId": {
@@ -1102,19 +1102,19 @@
         }
       }
     },
-    "EC2VPCG3E7DB": {
-      "Type": "AWS::EC2::VPCGatewayAttachment",
+    "RTAttachSN2": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
       "Properties": {
-        "InternetGatewayId": {
-          "Ref": "AmiBuilderGW"
+        "RouteTableId": {
+          "Ref": "AmiBuilderRouting"
         },
-        "VpcId": {
-          "Ref": "AmiBuilderVPC"
+        "SubnetId": {
+          "Ref": "AmiBuilderSubnet1"
         }
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
-          "id": "fb6eb302-200a-4f7b-9bed-446ec37fe59c"
+          "id": "5d52e19e-85cb-44be-a75f-0f9450bfb619"
         }
       }
     }
