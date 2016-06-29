@@ -1,0 +1,19 @@
+publish:
+  condor:
+    image: plugins/drone-terraform
+    # plan: true
+    sensitive: true
+    remote:
+      backend: S3
+      config:
+        bucket: andres-cfn-base
+        key: terraform/condor.$$BRANCH.tfstate
+        region: us-east-1
+        access_key: $$AWS_ACCESS_KEY_ID
+        secret_key: $$AWS_SECRET_ACCESS_KEY
+    vars:
+      aws_access_key: $$AWS_ACCESS_KEY_ID
+      aws_secret_key: $$AWS_SECRET_ACCESS_KEY
+      aws_region: us-east-1
+      branch: $$BRANCH
+    root_dir: apps/condor
