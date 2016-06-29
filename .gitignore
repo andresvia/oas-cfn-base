@@ -1,2 +1,3 @@
 plan.tfout
 .terraform
+.drone.sec.yml
