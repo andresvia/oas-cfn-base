@@ -753,7 +753,8 @@
                       "arn:aws:s3:::",
                       {
                         "Ref": "EstadosTerraform"
-                      }
+                      },
+                      "*"
                     ]
                   ]
                 },
@@ -764,7 +765,8 @@
                       "arn:aws:s3:::",
                       {
                         "Ref": "RepositorioRPM"
-                      }
+                      },
+                      "*"
                     ]
                   ]
                 }
@@ -889,7 +891,8 @@
                     "arn:aws:s3:::",
                     {
                       "Ref": "RepositorioRPM"
-                    }
+                    },
+                    "*"
                   ]
                 ]
               }
