@@ -502,7 +502,7 @@
     "CloudFormerSubnet": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "192.168.120.0/24",
+        "CidrBlock": "192.168.121.0/24",
         "MapPublicIpOnLaunch": true,
         "VpcId": {
           "Ref": "CloudFormerVPC"
