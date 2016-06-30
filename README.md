@@ -19,6 +19,5 @@ Plantillas base de CloudFormation.
    rm .drone.sec.yml
    git add .drone.sec
    git commit -m "configurando secretos"
-   git push origin master
+   # git push <<remote>> <<branch>>
    ```
-
