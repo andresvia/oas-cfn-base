@@ -512,21 +512,6 @@
         }
       }
     },
-    "CloudFormerSubnet2": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "192.168.121.0/24",
-        "MapPublicIpOnLaunch": true,
-        "VpcId": {
-          "Ref": "CloudFormerVPC"
-        }
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "72504e3e-5afc-4279-8d72-b32f906be686"
-        }
-      }
-    },
     "CloudFormerInternetGW": {
       "Type": "AWS::EC2::InternetGateway",
       "Properties": {},
@@ -589,28 +574,12 @@
           "Ref": "CloudFormerRouting"
         },
         "SubnetId": {
-          "Ref": "CloudFormerSubnet2"
-        }
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "a76a9deb-c070-4294-89a0-ef368ccf049b"
-        }
-      }
-    },
-    "RTAttachSN2": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "CloudFormerRouting"
-        },
-        "SubnetId": {
           "Ref": "CloudFormerSubnet1"
         }
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
-          "id": "5d52e19e-85cb-44be-a75f-0f9450bfb619"
+          "id": "a76a9deb-c070-4294-89a0-ef368ccf049b"
         }
       }
     },
@@ -933,6 +902,11 @@
     }
   },
   "Outputs": {
+    "AppProfile": {
+      "Value": {
+        "Ref": "AppProfile"
+      }
+    },
     "CloudFormerEstadosTerraform": {
       "Value": {
         "Ref": "EstadosTerraform"
@@ -966,23 +940,10 @@
         "Ref": "CloudFormerSubnet1"
       }
     },
-    "CloudFormerSubnet2": {
-      "Value": {
-        "Ref": "CloudFormerSubnet2"
-      }
-    },
     "CloudFormerAvailabilityZone1": {
       "Value": {
         "Fn::GetAtt": [
           "CloudFormerSubnet1",
-          "AvailabilityZone"
-        ]
-      }
-    },
-    "CloudFormerAvailabilityZone2": {
-      "Value": {
-        "Fn::GetAtt": [
-          "CloudFormerSubnet2",
           "AvailabilityZone"
         ]
       }
