@@ -6,7 +6,7 @@ publish:
     remote:
       backend: S3
       config:
-        bucket: andres-cfn-base
+        bucket: cfn-base
         key: terraform/condor.$$BRANCH.tfstate
         region: us-east-1
         access_key: $$AWS_ACCESS_KEY_ID
