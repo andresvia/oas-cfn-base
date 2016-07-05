@@ -15,10 +15,9 @@ Plantillas base de CloudFormation.
    # vim .drone.sec.yml
    # emacs .drone.sec.yml
    # etc...
-   drone secure --repo plataforma/condor-estudiantes-stack --checksum
+   drone secure --repo plataforma/cfn-base --checksum
    rm .drone.sec.yml
    git add .drone.sec
    git commit -m "configurando secretos"
-   git push origin master
+   # git push <<remote>> <<branch>>
    ```
-

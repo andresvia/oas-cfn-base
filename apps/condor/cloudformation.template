@@ -489,7 +489,9 @@
     "CloudFormerVPC": {
       "Type": "AWS::EC2::VPC",
       "Properties": {
-        "CidrBlock": "192.168.120.0/23"
+        "CidrBlock": "192.168.120.0/23",
+        "EnableDnsSupport": "true",
+        "EnableDnsHostnames": "true"
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
@@ -497,22 +499,7 @@
         }
       }
     },
-    "CloudFormerSubnet1": {
-      "Type": "AWS::EC2::Subnet",
-      "Properties": {
-        "CidrBlock": "192.168.120.0/24",
-        "MapPublicIpOnLaunch": true,
-        "VpcId": {
-          "Ref": "CloudFormerVPC"
-        }
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "97441018-c1b0-4602-a2fa-bd2d5e054517"
-        }
-      }
-    },
-    "CloudFormerSubnet2": {
+    "CloudFormerSubnet": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
         "CidrBlock": "192.168.121.0/24",
@@ -523,7 +510,7 @@
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
-          "id": "72504e3e-5afc-4279-8d72-b32f906be686"
+          "id": "97441018-c1b0-4602-a2fa-bd2d5e054517"
         }
       }
     },
@@ -538,6 +525,7 @@
     },
     "CloudFormerInternetRoute": {
       "Type": "AWS::EC2::Route",
+      "DependsOn" : "InternetGWAttachVPC",
       "Properties": {
         "DestinationCidrBlock": "0.0.0.0/0",
         "RouteTableId": {
@@ -589,28 +577,12 @@
           "Ref": "CloudFormerRouting"
         },
         "SubnetId": {
-          "Ref": "CloudFormerSubnet2"
+          "Ref": "CloudFormerSubnet"
         }
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
           "id": "a76a9deb-c070-4294-89a0-ef368ccf049b"
-        }
-      }
-    },
-    "RTAttachSN2": {
-      "Type": "AWS::EC2::SubnetRouteTableAssociation",
-      "Properties": {
-        "RouteTableId": {
-          "Ref": "CloudFormerRouting"
-        },
-        "SubnetId": {
-          "Ref": "CloudFormerSubnet1"
-        }
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "5d52e19e-85cb-44be-a75f-0f9450bfb619"
         }
       }
     },
@@ -753,7 +725,8 @@
                       "arn:aws:s3:::",
                       {
                         "Ref": "EstadosTerraform"
-                      }
+                      },
+                      "*"
                     ]
                   ]
                 },
@@ -764,7 +737,8 @@
                       "arn:aws:s3:::",
                       {
                         "Ref": "RepositorioRPM"
-                      }
+                      },
+                      "*"
                     ]
                   ]
                 }
@@ -889,7 +863,8 @@
                     "arn:aws:s3:::",
                     {
                       "Ref": "RepositorioRPM"
-                    }
+                    },
+                    "*"
                   ]
                 ]
               }
@@ -930,6 +905,11 @@
     }
   },
   "Outputs": {
+    "AppProfile": {
+      "Value": {
+        "Ref": "AppProfile"
+      }
+    },
     "CloudFormerEstadosTerraform": {
       "Value": {
         "Ref": "EstadosTerraform"
@@ -958,28 +938,15 @@
         "Ref": "CloudFormerVPC"
       }
     },
-    "CloudFormerSubnet1": {
+    "CloudFormerSubnet": {
       "Value": {
-        "Ref": "CloudFormerSubnet1"
+        "Ref": "CloudFormerSubnet"
       }
     },
-    "CloudFormerSubnet2": {
-      "Value": {
-        "Ref": "CloudFormerSubnet2"
-      }
-    },
-    "CloudFormerAvailabilityZone1": {
+    "CloudFormerAvailabilityZone": {
       "Value": {
         "Fn::GetAtt": [
-          "CloudFormerSubnet1",
-          "AvailabilityZone"
-        ]
-      }
-    },
-    "CloudFormerAvailabilityZone2": {
-      "Value": {
-        "Fn::GetAtt": [
-          "CloudFormerSubnet2",
+          "CloudFormerSubnet",
           "AvailabilityZone"
         ]
       }
